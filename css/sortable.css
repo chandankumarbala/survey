@@ -1,0 +1,33 @@
+.dragged {
+    position: absolute;
+    opacity: 0.5;
+    z-index: 2000;
+}
+
+ol.example li.placeholder {
+    position: relative;
+    /** More li styles **/
+}
+ol.example li.placeholder:before {
+    position: absolute;
+    /** Define arrowhead **/
+}
+.sortParent{
+    cursor: move !important;
+}
+ol.vertical {
+    margin: 0 0 9px 0;
+    min-height: 10px;
+}
+ol.vertical li {
+    display: block;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #cccccc;
+    color: #0088cc;
+    background: #eeeeee;
+    cursor: pointer;
+}
+li {
+    line-height: 18px;
+}

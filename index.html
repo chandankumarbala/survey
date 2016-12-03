@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="js/angular.min.js" ></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/sortable.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+</head>
+<body>
+<div >
+
+
+<div class="container">
+    <div class="row">
+        <h2>Create Survey Component</h2>
+    </div>
+</div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Form Items</div>
+                    <div class="panel-body">
+
+                            <ul class="list-group form-fields">
+                                <li class="list-group-item"><div class="checkbox disabled">
+                                    <label><input type="checkbox" value="" disabled>Multi Option</label>
+                                </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="radio disabled">
+                                        <label><input type="radio" name="optradio" disabled>Uni Option</label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item"><input type="text" class="form-control "  disabled placeholder="text"></li>
+                                <li class="list-group-item">
+                                    <select class="form-control" id="sel1" disabled>
+                                    <option>Selectable Option</option>
+                                </select>
+                                </li>
+                            </ul>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+
+                        <ol class="simple_with_animation vertical">
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+
+                        </ol>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src='js/jquery-1.12.4.min.js'></script>
+<script src='js/jquery-sortable.js'></script>
+<script>
+    $("ol.vertical").sortable();
+</script>
+</body>
+</html>

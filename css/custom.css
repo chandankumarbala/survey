@@ -1,0 +1,7 @@
+.form-fields input,.form-fields select,.form-fields label,.form-fields>li>div{
+    cursor: cell !important;
+}
+.form-fields>li>div.checkbox,div.radio{
+    margin-bottom: 3px !important;
+    margin-top: 3px !important;
+}
