@@ -3,6 +3,7 @@
 <head>
     <title></title>
     <script src="js/angular.min.js" ></script>
+    <script src="js/app.js" ></script>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/sortable.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
@@ -19,8 +20,8 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <div class="panel panel-default">
+            <div class="col-md-4" >
+                <div class="panel panel-default" ng-app="formComponent" form-component-left-panel>
                     <div class="panel-heading">Form Items</div>
                     <div class="panel-body">
 
@@ -31,26 +32,26 @@
                                 </li>
                                 <li class="list-group-item">
                                     <div class="radio disabled">
-                                        <label><input type="radio" name="optradio" disabled>Uni Option</label>
+                                        <label><input type="radio"  disabled>Uni Option</label>
                                     </div>
                                 </li>
                                 <li class="list-group-item"><input type="text" class="form-control "  disabled placeholder="text"></li>
                                 <li class="list-group-item">
-                                    <select class="form-control" id="sel1" disabled>
-                                    <option>Selectable Option</option>
+                                    <select class="form-control" disabled>
+                                    <option >Selectable Option</option>
                                 </select>
                                 </li>
                             </ul>
-
+                        <div id="space-for-buttons"></div>
                     </div>
                 </div>
             </div>
             <div class="col-md-8">
-                <div class="panel panel-default">
-                    <div class="panel-body">
+                <div class="panel panel-default" ng-app="formComponent" form-component-right-panel>
+                    <div class="panel-body" ng-controller="formComponentController">
 
                         <ol class="simple_with_animation vertical">
-                            <li>Item 1</li>
+                            <li>Item 1{{item}}</li>
                             <li>Item 2</li>
 
                         </ol>
