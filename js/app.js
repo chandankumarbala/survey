@@ -16,13 +16,18 @@ formComponent.directive("formComponentLeftPanel", function($compile){
 
             angular.element(item).bind("click", function(){
                 var targetElemnt=$(this);
-                var clonedObject=angular.copy(targetElemnt.find("input"));
-                angular.element($("[form-component-right-panel]")).append(clonedObject);
+                var clonedObject=angular.copy(targetElemnt.html());
+                var enabledClonedObj=$(clonedObject).removeClass('disabled');
+                var label=enabledClonedObj.find('label').text("");
+                enabledClonedObj.find('label').remove().append(label);
+
+                var listElement=$("<li></li>").html(enabledClonedObj);
+                angular.element($("[form-component-right-panel]").find('ol')).append($compile(listElement)(scope));
             });
         });
-        element.bind("click", function(){
+       /* element.bind("click", function(){
             scope.count++;
             angular.element(document.getElementById('space-for-buttons')).append($compile("<div><button class='btn btn-default' data-alert="+scope.count+">Show alert #"+scope.count+"</button></div>")(scope));
-        });
+        });*/
     };
 });
